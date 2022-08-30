@@ -67,5 +67,32 @@ namespace Lesson2
             this.balance = balance;
         }
 
+
+        /// <summary>
+        /// Функция снятия со счета
+        /// </summary>
+        /// <param name="requestedAmount"> Запрашиваемая сумма >0 </param>
+        /// <returns>Прошла ли операция успешно</returns>
+        public bool WithdrawFromTheAccount(float requestedAmount)
+        {
+            if ((Balance < requestedAmount)||(requestedAmount<0)) return false;
+            Balance-=requestedAmount;
+            return true;
+        }
+
+
+        //Ну, просили 2 функции
+
+        /// <summary>
+        /// Функция внесения денег на счет
+        /// </summary>
+        /// <param name="amount">Сумма внечения>0</param>
+        /// <returns>Прошла ли операция успешно</returns>
+        public bool TopUpTheAccount(float amount) 
+        {
+            if (amount > 0) { Balance += amount; return true; }
+            return false;
+        }
+
     }
 }
