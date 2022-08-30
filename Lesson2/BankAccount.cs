@@ -62,5 +62,22 @@ namespace Lesson2
 
             this.balance = balance;
         }
+
+        public BankAccount() : this(AccountTypes.DemandDeposit, 0) { }
+
+        public BankAccount(long accountNumber):this()
+        {
+            this.accountNumber = accountNumber;
+        }
+
+        public BankAccount(AccountTypes accountType) : this()
+        {
+            this.accountType = accountType;
+        }
+        public BankAccount(float balance) : this()
+        {
+            this.balance = balance;
+        }
+
     }
 }
