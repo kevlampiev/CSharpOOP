@@ -6,8 +6,10 @@ namespace Lesson2
     {
         static void Main(string[] args)
         {
-            BankAccount account = new BankAccount(407810500000000148, AccountTypes.DemandDeposit, 400);
-            account.Print();
+            BankAccount account1 = new BankAccount( AccountTypes.DemandDeposit, 400);
+            BankAccount account2 = new BankAccount( AccountTypes.CreditCardAccount, -500);
+            account1.Print();
+            account2.Print();
             Console.ReadKey();
         }
     }

@@ -21,11 +21,13 @@ namespace Lesson2
         private float balance = 0;
         private readonly AccountTypes accountType = AccountTypes.DemandDeposit;
 
+        private static Int64 defaultAccountNo = 0;
+
         public string AccountNumber { get { return accountNumber.ToString(); } }
         public string AccountType { get { return accountType.ToString(); } }
         public float Balance { get { return balance; } set { if (value > 0) { balance = value; } } }
 
-        public BankAccount(Int64 accountNo, AccountTypes accountType, float balance) 
+/*        public BankAccount(Int64 accountNo, AccountTypes accountType, float balance) 
         { 
             this.accountNumber = accountNo;
             this.accountType = accountType;
@@ -37,7 +39,7 @@ namespace Lesson2
             this.accountNumber = accountNumber;
             this.accountType = accountType;
         }
-
+*/
         /// <summary>
         /// Выводит данные о счете и его состоянии
         /// </summary>
@@ -46,6 +48,19 @@ namespace Lesson2
             Console.WriteLine("-------------------------------------------------");
             Console.WriteLine($" Account No: {this.AccountNumber} \n Account Type: {this.AccountType} \n Remain: {this.Balance}");
             Console.WriteLine("-------------------------------------------------");
+        }
+
+        private Int64 GetNewAccountNumber() 
+        {
+            return defaultAccountNo++;
+        }
+
+        public BankAccount(AccountTypes accountType, float balance) 
+        {
+            this.accountNumber = GetNewAccountNumber();
+            this.accountType = accountType;
+
+            this.balance = balance;
         }
     }
 }
