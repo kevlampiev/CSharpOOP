@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Lesson3
 {
@@ -10,6 +11,17 @@ namespace Lesson3
             Console.WriteLine(header);
             Console.WriteLine(new string('-', 80));
             Console.ResetColor();
+
+        }
+
+        static string FlipTheString(string sourceStr)
+        {
+            StringBuilder newStr = new StringBuilder(sourceStr.Length);
+            for (int i = sourceStr.Length-1; i >=0; i--)
+            {
+                newStr.Append(sourceStr[i]);
+            }
+            return newStr.ToString();
 
         }
 
@@ -30,9 +42,21 @@ namespace Lesson3
             account2.Print();
         }
 
+        static void PointTwo()
+        {
+            DisplayHeader("Задание 2. Создание метода, разворачивающего строку");
+            string sourceString = "Главрыба";
+
+            Console.WriteLine(sourceString + " <=> "+FlipTheString(sourceString));
+
+        }
+        
+
         static void Main(string[] args)
         {
             PointOne();
+            PointTwo();
+            Console.WriteLine("Нажмите ч-н для выхода....");
             Console.ReadKey();
         }
     }
