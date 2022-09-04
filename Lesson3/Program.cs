@@ -50,12 +50,21 @@ namespace Lesson3
             Console.WriteLine(sourceString + " <=> "+FlipTheString(sourceString));
 
         }
-        
+
+        static void PointThree()
+        {
+            DisplayHeader("Задание 3. Выбрать все email из файла ");
+            EmailCollector emailCollector = new EmailCollector("D:\\CSharpProj\\OOP\\CSharpOOP\\Lesson3\\datafile.txt",
+                "D:\\CSharpProj\\OOP\\CSharpOOP\\Lesson3\\email.\txt");
+            emailCollector.Handle();
+            emailCollector.DisplayREsults();
+        }
 
         static void Main(string[] args)
         {
             PointOne();
             PointTwo();
+            PointThree();
             Console.WriteLine("Нажмите ч-н для выхода....");
             Console.ReadKey();
         }
