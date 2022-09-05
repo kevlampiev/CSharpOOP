@@ -7,14 +7,14 @@ namespace Lesson2
     /// <summary>
     /// Типы бавнковских счетов
     /// </summary>
-    enum AccountTypes 
+    public enum AccountTypes 
     { 
         DemandDeposit,
         TermDeposit,
         CreditCardAccount,
         TemporaryAcount
     }
-    internal class BankAccount
+    public class BankAccount
     {
         //Поля
         private Int64 accountNumber;
