@@ -6,8 +6,15 @@ namespace lesson4
     {
         static void Main(string[] args)
         {
-            Building house = new Building(15, 3, 2, 1);
-            house.DisplayBuingingInfo();
+            for (int i = 0; i < 3; i++) 
+            {
+                Creator.CreateBuild();
+            }
+            Console.WriteLine("СОЗДАНЫ 3 ДОМА");
+            Creator.DisplayBuildings();
+            Creator.RemoveBuilding(2);
+            Console.WriteLine("РАЗРУШЕН СРЕДНИЙ");
+            Creator.DisplayBuildings();
             Console.ReadKey();
         }
     }

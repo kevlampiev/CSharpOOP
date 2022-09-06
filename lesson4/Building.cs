@@ -30,6 +30,9 @@ namespace lesson4
             _height = Math.Max(height, 2.4 * _numberOfFloors);
         }
 
+        // Надо бы, конечно, через константы, но не сегодня
+        public Building() : this(17 * 2.7, 17, 17 * 4 * 4, 4) { }
+
         public int HouseNumber { get { return _houseNumber; } }
         public double Height { 
             get { return _height; } 
