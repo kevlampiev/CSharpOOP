@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace lesson4
+namespace BuildingsClasses
 {
-    internal class Building
+    public class Building
     {
         private int _houseNumber;
         private double _height;

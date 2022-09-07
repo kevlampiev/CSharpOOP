@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace lesson4
+namespace BuildingsClasses
 {
-    internal class Creator
+    public class Creator
     {
 
         static Hashtable Buildings=new Hashtable();
