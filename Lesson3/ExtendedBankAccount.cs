@@ -6,7 +6,7 @@ using Lesson2;
 
 namespace Lesson3
 {
-    internal class ExtendedBankAccount : BankAccount
+    public class ExtendedBankAccount : BankAccount
     {
         public ExtendedBankAccount(float summ) : base(summ) { }
         public ExtendedBankAccount():base() { }
@@ -25,8 +25,6 @@ namespace Lesson3
             };
             this.TopUpTheAccount(summ);
             return true;
-            
-                
         }
     }
 }
