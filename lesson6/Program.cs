@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using KEvlampiev.ConsoleUtils;
+using lesson6.Figures;
 
 namespace lesson6
 {
@@ -22,11 +24,33 @@ namespace lesson6
             Console.WriteLine($"Hash code of account 2 is {bankAccount2.GetHashCode()}");
            
         }
+
+
+        public static void PointTwo() 
+        {
+            ConsoleToolKit.DisplayHeader("Задание 2");
+
+            List<Point> figureCollection = new List<Point>();
+            figureCollection.Add(new Point());
+            figureCollection.Add(new Point());
+            figureCollection.Add(new Circle(5)); 
+            figureCollection.Add(new Circle(1,1,FigureColors.blue, 5));
+            figureCollection.Add(new Rectangle(1, 3, FigureColors.blue, 5,3));
+            figureCollection.Add(new Rectangle(7));
+
+            foreach (Point el in figureCollection) 
+            {
+                el.Render();
+                Console.WriteLine(el.Square);
+            }
+        }
+
+
         static void Main(string[] args)
         {
             PointOne();
+            PointTwo();
             Console.ReadKey();
-
         }
     }
 }
