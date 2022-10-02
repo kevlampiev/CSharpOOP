@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace lesson6.Figures
+namespace Lesson7.Figures
 {
     public class Point:Figure
     {
@@ -52,5 +52,9 @@ namespace lesson6.Figures
             return _figureName+"\t "+base.ToString();
         }
 
+        public override void Render()
+        {
+            Console.WriteLine(ToString());
+        }
     }
 }
